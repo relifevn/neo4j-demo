@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common'
-import { Neo4jService } from './neo4j/neo4j.service'
+import { Neo4jService } from 'src/neo4j/neo4j.service'
 
 @Injectable()
-export class AppService {
+export class UserService {
 
   constructor(
     private readonly neo4jService: Neo4jService,
@@ -10,8 +10,8 @@ export class AppService {
 
   }
 
-  getHello(): string {
-    return 'Hello World!'
+  async getUsers(): Promise<any> {
+    
   }
 
 }
